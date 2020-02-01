@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Requirement #1</h2>
+    <input id="input1" type="text"><button id="button1" onclick="requirement1()">Submit</button>
+    <div id="output1"></div>
+
+    <h2>Requirement #2</h2>
+    <!-- 1.3  Addition -->
+    <input id="input2" type="text"><button id="button2" onclick="requirement2()">Sum</button>
+    <div id="output2"></div>
+    <!-- Substact -->
+    <h2>Requirement #3</h2>
+    <input id="input3_1" placeholder="enter a number" type="number">
+    <input id="input3_2" placeholder="enter a number" type="number">
+    <button id="button3" onclick="requirement3()">+</button>
+    <div id="output3"></div>
+
+    <h2>Requirement #4a</h2>
+    <input id="input4_1a" placeholder="enter a number" type="number">
+    <input id="input4_2a" placeholder="enter a number" type="number">
+    <button id="button4a" onclick="requirement4a()">-</button>
+    <div id="output4a"></div>
+
+    <h2>Requirement #4b</h2>
+    <input id="input4_1b" placeholder="enter a number" type="number">
+    <input id="input4_2b" placeholder="enter a number" type="number">
+    <button id="button4b" onclick="requirement4b()">x</button>
+    <div id="output4b"></div>
+
+    <h2>Stretch</h2>
+    <input id="stretchNumber1" placeholder="enter a number" type="number"><input id="stretchNumber2"
+        placeholder="enter a number" type="number">
+    <button id="stretchAdd" onclick="stretch(add)">+</button>
+    <button id="stretchSub" onclick="stretch(subtract)">-</button>
+    <button id="stretchMult" onclick="stretch(multiply)">*</button>
+    <div id="stretchOutput"></div>
+
+    <script>
+        function requirement1() {
+            document.getElementById('output1').innerHTML =
+                "You typed: " + document.getElementById('input1').value;
+        }
+
+        function requirement2() {
+            document.getElementById('output2').innerHTML =
+                'Value: ' + parseInt(sum(document.getElementById('input2').value));
+        }
+        //2.1 (take that number and sum all the numbers up to the number provided)
+        function sum(number) {
+            let total = 0;
+            for (let i = 0; i <= number; i++) {
+                total += i;
+            }
+            return total;
+        }
+        //3.1 (take the numbers from each input, add them together, and output the result to a div)
+        function requirement3() {
+            let number1 = parseInt(document.getElementById('input3_1').value);
+            let number2 = parseInt(document.getElementById('input3_2').value);
+            console.log(number1 + " and this is " + number2);
+            let result = add(number1, number2);
+            document.getElementById('output3').innerHTML = result;
+        }
+
+        function add(number1, number2) {
+            return number1 + number2;
+        }
+
+        function requirement4a() {
+            let number1 = parseInt(document.getElementById('input4_1a').value);
+            let number2 = parseInt(document.getElementById('input4_2a').value);
+            let result = subtract(number1, number2);
+            document.getElementById('output4a').innerHTML = result;
+        }
+
+        function requirement4b() {
+            let number1 = parseInt(document.getElementById('input4_1b').value);
+            let number2 = parseInt(document.getElementById('input4_2b').value);
+            let result = multiply(number1, number2);
+            document.getElementById('output4b').innerHTML = result;
+        }
+
+        // 4.1
+        // 4.1.a arrow expression
+        subtract = (number1, number2) => {
+            return number1 - number2;
+        }
+        // 4.1.b function expression
+        let multiply = function (number1, number2) {
+            return number1 * number2;
+            stretchOutput
+        }
+
+        let stretch = (operation) => {
+            let number1 = parseInt(document.getElementById('stretchNumber1').value);
+            let number2 = parseInt(document.getElementById('stretchNumber2').value);
+            let result = operation(number1, number2);
+            document.getElementById('stretchOutput').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

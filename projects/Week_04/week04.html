@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td class="border" ontouchend="onTouch('a1')" id="a1"></td>
+				<td class="border" ontouchend="onTouch('a2')" id="a2"></td>
+				<td class="border" ontouchend="onTouch('a3')" id="a3"></td>
+			</tr>
+			<tr>
+				<td class="border" ontouchend="onTouch('a4')" id="a4"></td>
+				<td class="border" ontouchend="onTouch('a5')" id="a5"></td>
+				<td class="border" ontouchend="onTouch('a6')" id="a6"></td>
+			</tr>
+			<tr>
+				<td class="border" ontouchend="onTouch('a7')" id="a7"></td>
+				<td class="border" ontouchend="onTouch('a8')" id="a8"></td>
+				<td class="border" ontouchend="onTouch('a9')" id="a9"></td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		let count = 0;
+		let onTouch = id => {
+			console.log(count);
+			if (count == 9) {
+				let boxes = document.getElementsByClassName('border');
+				for (const box of boxes) {
+					box.innerHTML = '';
+				}
+			}
+			let box = document.getElementById(id);
+			if (count % 2) {
+				box.innerHTML = 'X';
+				count++;
+			} else {
+				box.innerHTML = 'O';
+				count++;
+			}
+		};
+	</script>
+</html>
