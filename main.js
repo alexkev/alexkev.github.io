@@ -15,8 +15,6 @@ buttonUp.addEventListener('click', () => {
 		count -= 1;
 	}
 	jump(targets[count]);
-
-	console.log(count);
 });
 
 buttonDown.addEventListener('click', () => {
@@ -28,8 +26,6 @@ buttonDown.addEventListener('click', () => {
 		count += 1;
 	}
 	jump(targets[count]);
-
-	console.log(count);
 });
 
 // NAV JUMP LOGIC
@@ -70,7 +66,6 @@ experience.addEventListener('click', () => {
 
 contact.addEventListener('click', () => {
 	jump('.contact');
-	console.log('something happened');
 	count = 4;
 	rmActive();
 	contact.classList.add('active');
