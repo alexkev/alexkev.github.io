@@ -1,0 +1,65 @@
+/* RELATIVE LENGTHS:
+em	    Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	    Relative to the x-height of the current font (rarely used)	
+ch	    Relative to width of the "0" (zero)	
+rem	    Relative to font-size of the root element	
+vw	    Relative to 1% of the width of the viewport*	
+vh	    Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	    Relative to the parent element
+
+*/
+.board {
+	width: 320px;
+	height: 320px;
+}
+
+.board td,
+.board tr {
+	width: 33.3%;
+	height: 33.3%;
+}
+
+.board td {
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	font-size: 5em;
+	text-align: center;
+}
+
+#a1 {
+	border-top: none;
+	border-left: none;
+}
+
+#a2 {
+	border-top: none;
+}
+
+#a3 {
+	border-top: none;
+	border-right: none;
+}
+
+#a4 {
+	border-left: none;
+}
+
+#a6 {
+	border-right: none;
+}
+
+#a7 {
+	border-left: none;
+	border-bottom: none;
+}
+
+#a8 {
+	border-bottom: none;
+}
+
+#a9 {
+	border-bottom: none;
+	border-right: none;
+}

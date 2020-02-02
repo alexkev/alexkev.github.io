@@ -4,11 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
-		<link rel="stylesheet" href="../styles.css" />
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="w04-team-activity.css" />
 	</head>
+
 	<body>
-		<table>
+		<table class="board">
 			<tr>
 				<td class="border" ontouchend="onTouch('a1')" id="a1"></td>
 				<td class="border" ontouchend="onTouch('a2')" id="a2"></td>
@@ -25,25 +26,10 @@
 				<td class="border" ontouchend="onTouch('a9')" id="a9"></td>
 			</tr>
 		</table>
+		
+		<button ontouchend="resetBoard()" id="reset">Reset</button>
+		<h2>Per instructions, this Tic-Tac-Toe is touch based</h2>
+		<p><em>Press F12, and select touch controls <em></p>
+		<script src="w04-team-activity.js"></script>
 	</body>
-	<script>
-		let count = 0;
-		let onTouch = id => {
-			console.log(count);
-			if (count == 9) {
-				let boxes = document.getElementsByClassName('border');
-				for (const box of boxes) {
-					box.innerHTML = '';
-				}
-			}
-			let box = document.getElementById(id);
-			if (count % 2) {
-				box.innerHTML = 'X';
-				count++;
-			} else {
-				box.innerHTML = 'O';
-				count++;
-			}
-		};
-	</script>
 </html>

@@ -5,7 +5,6 @@ body {
 	grid-template-columns: 13% 37% 37% 13%;
 	grid-template-rows: minmax(34vh, auto);
 }
-
 /* background */
 .container {
 	grid-column: 1 / 5;
@@ -123,6 +122,10 @@ nav > a > h1 {
 }
 
 /* Profolio */
+h2 {
+	width: 100%;
+	text-align: center;
+}
 .card {
 	width: 26em;
 	padding: 0.25em;
@@ -154,6 +157,48 @@ nav > a > h1 {
 #project:hover {
 	text-decoration: underline;
 	color: #4285f4;
+}
+
+.code-icon-1 {
+	width: 40px;
+	margin: 0px;
+}
+.code-icon-2 {
+	width: 41px;
+	margin: 0px;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip + span {
+	visibility: hidden;
+	width: 120px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 5px;
+
+	position: relative;
+	bottom: 13px;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip:hover + .tooltip-left-1:before {
+	content: 'Open the Browser View';
+}
+.tooltip:hover + .tooltip-left-2:before {
+	content: 'Open on Github';
+}
+
+.tooltip:hover + span {
+	visibility: visible;
+	opacity: 1;
 }
 
 /* experience */
