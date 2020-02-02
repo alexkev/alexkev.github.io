@@ -1,5 +1,4 @@
-import jump from './jump.module.js';
-
+import jump from './jump.js';
 // ARROW  JUMP LOGIC
 
 var targets = ['.container', '.bio', '.profolio', '.experience', '.contact'];
