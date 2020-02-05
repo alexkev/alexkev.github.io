@@ -134,6 +134,11 @@ nav > a > h1 {
 	background-attachment: fixed;
 	height: 250px;
 }
+/* Dropdown */
+.dropdown {
+	visibility: hidden;
+	height: 0px;
+}
 
 /* Profolio */
 .profolio {
@@ -143,6 +148,8 @@ nav > a > h1 {
 h2 {
 	width: 100%;
 	text-align: center;
+	padding-bottom: 7px;
+	border-bottom: 3px solid black;
 }
 .card {
 	width: 26em;
