@@ -148,9 +148,17 @@ nav > a > h1 {
 h2 {
 	width: 100%;
 	text-align: center;
-	padding-bottom: 7px;
+	padding-bottom: 12px;
 	border-bottom: 3px solid black;
 }
+.profolio-hover {
+	padding: 0.25em;
+}
+
+.profolio-hover:hover {
+	border: 1px solid black;
+}
+
 .card {
 	width: 26em;
 	padding: 0.25em;
