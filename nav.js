@@ -36,39 +36,56 @@ var profolio = document.getElementById('profolio');
 var experience = document.getElementById('experience');
 var contact = document.getElementById('contact');
 
-home.addEventListener('click', () => {
+let homeJump = () => {
 	jump('.container');
 	count = 0;
 	rmActive();
 	home.classList.add('active');
+};
+
+home.addEventListener('click', () => {
+	location.hash = '#/home';
 });
 
-bio.addEventListener('click', () => {
+let bioJump = () => {
 	jump('.bio');
 	count = 1;
 	rmActive();
 	bio.classList.add('active');
+};
+
+bio.addEventListener('click', () => {
+	location.hash = '#/bio';
 });
 
-profolio.addEventListener('click', () => {
+let profolioJump = () => {
 	jump('.profolio');
 	count = 2;
 	rmActive();
 	profolio.classList.add('active');
+};
+profolio.addEventListener('click', () => {
+	location.hash = '#/profolio';
 });
 
-experience.addEventListener('click', () => {
+let experienceJump = () => {
 	jump('.experience');
 	count = 3;
 	rmActive();
 	experience.classList.add('active');
+};
+experience.addEventListener('click', () => {
+	location.hash = '#/experience';
 });
 
-contact.addEventListener('click', () => {
+let contactJump = () => {
 	jump('.contact');
 	count = 4;
 	rmActive();
 	contact.classList.add('active');
+};
+contact.addEventListener('click', () => {
+	location.hash = '#/contact';
 });
 
 // NAV BAR SElECTOR
@@ -79,3 +96,19 @@ function rmActive() {
 	experience.classList.remove('active');
 	contact.classList.remove('active');
 }
+
+function locationHashChanged() {
+	if (location.hash === '#/home') {
+		homeJump();
+	} else if (location.hash === '#/bio') {
+		bioJump();
+	} else if (location.hash === '#/profolio') {
+		profolioJump();
+	} else if (location.hash === '#/experience') {
+		experienceJump();
+	} else if (location.hash === '#/contact-me') {
+		contactJump();
+	}
+}
+
+window.onhashchange = locationHashChanged;
