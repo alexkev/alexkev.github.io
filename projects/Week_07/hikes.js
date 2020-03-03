@@ -106,18 +106,20 @@ function renderOneHikeLight(hike) {
 	item.classList.add('light');
 	// setting this to make getting the details for a specific hike easier later.
 	item.setAttribute('data-name', hike.name);
-	item.innerHTML = ` <h2>${hike.name}</h2>
-<div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
-<div>
-        <div>
-            <h3>Distance</h3>
-            <p>${hike.distance}</p>
-        </div>
-        <div>
-            <h3>Difficulty</h3>
-            <p>${hike.difficulty}</p>
-        </div>
-</div>`;
+	item.innerHTML = ` 
+		<h2>${hike.name}</h2>
+	<div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+	<div>
+			<div>
+				<h3>Distance</h3>
+				<p>${hike.distance}</p>
+			</div>
+			<div>
+				<h3>Difficulty</h3>
+				<p>${hike.difficulty}</p>
+			</div>
+	</div>
+	`;
 
 	return item;
 }
