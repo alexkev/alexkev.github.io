@@ -1,7 +1,7 @@
 import jump from './jump.js';
 // ARROW  JUMP LOGIC
 
-var targets = ['.container', '.bio', '.profolio', '.experience', '.contact'];
+var targets = ['.container', '.bio', '.portfolio', '.experience', '.contact'];
 
 var count = 0;
 
@@ -32,7 +32,7 @@ buttonDown.addEventListener('click', () => {
 
 var home = document.getElementById('home');
 var bio = document.getElementById('bio');
-var profolio = document.getElementById('profolio');
+var portfolio = document.getElementById('portfolio');
 var experience = document.getElementById('experience');
 var contact = document.getElementById('contact');
 
@@ -58,14 +58,14 @@ bio.addEventListener('click', () => {
 	location.hash = '#/bio';
 });
 
-let profolioJump = () => {
-	jump('.profolio');
+let portfolioJump = () => {
+	jump('.portfolio');
 	count = 2;
 	rmActive();
-	profolio.classList.add('active');
+	portfolio.classList.add('active');
 };
-profolio.addEventListener('click', () => {
-	location.hash = '#/profolio';
+portfolio.addEventListener('click', () => {
+	location.hash = '#/portfolio';
 });
 
 let experienceJump = () => {
@@ -92,7 +92,7 @@ contact.addEventListener('click', () => {
 function rmActive() {
 	home.classList.remove('active');
 	bio.classList.remove('active');
-	profolio.classList.remove('active');
+	portfolio.classList.remove('active');
 	experience.classList.remove('active');
 	contact.classList.remove('active');
 }
@@ -102,8 +102,8 @@ function locationHashChanged() {
 		homeJump();
 	} else if (location.hash === '#/bio') {
 		bioJump();
-	} else if (location.hash === '#/profolio') {
-		profolioJump();
+	} else if (location.hash === '#/portfolio') {
+		portfolioJump();
 	} else if (location.hash === '#/experience') {
 		experienceJump();
 	} else if (location.hash === '#/contact-me') {
