@@ -141,7 +141,7 @@ nav > a > h1 {
 }
 
 /* Profolio */
-.profolio {
+.portfolio {
 	margin-bottom: 70px;
 }
 
@@ -151,11 +151,11 @@ h2 {
 	padding-bottom: 12px;
 	border-bottom: 3px solid black;
 }
-.profolio-hover {
+.portfolio-hover {
 	padding: 0.25em;
 }
 
-.profolio-hover:hover {
+.portfolio-hover:hover {
 	border: 1px solid black;
 }
 
